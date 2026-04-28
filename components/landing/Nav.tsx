@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LaunchAppButton from './LaunchAppButton';
 
 export default function Nav() {
   return (
@@ -59,15 +60,12 @@ export default function Nav() {
         >
           Investors
         </a>
-        <button
-          data-tally-open="ODj9Lk"
-          data-tally-layout="modal"
-          data-tally-width="500"
-          className="launch"
+        <LaunchAppButton
+          tagSize="sm"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: 6,
+            gap: 7,
             padding: '9px 16px',
             borderRadius: 999,
             background: 'var(--lime)',
@@ -75,16 +73,8 @@ export default function Nav() {
             fontSize: 13,
             fontWeight: 700,
             letterSpacing: '-0.01em',
-            border: 'none',
-            cursor: 'pointer',
-            fontFamily: 'inherit',
           }}
-        >
-          Join Waitlist
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </button>
+        />
       </div>
     </nav>
   );

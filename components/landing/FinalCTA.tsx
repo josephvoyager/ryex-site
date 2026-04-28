@@ -1,3 +1,5 @@
+import LaunchAppButton from './LaunchAppButton';
+
 export default function FinalCTA() {
   return (
     <section
@@ -37,23 +39,16 @@ export default function FinalCTA() {
             marginBottom: 18,
           }}
         >
-          Be first when we open the gates.
+          Open the app. Plug in a wallet. See it move.
         </h2>
         <p style={{ fontSize: 17, color: 'var(--ink-3)', marginBottom: 36, lineHeight: 1.55, maxWidth: 520, margin: '0 auto 36px' }}>
-          Early access opens to traders, LPs, and partners aligned with what we're building.
+          The demo is in active development. For an early walkthrough, ping us directly.
         </p>
-        <button
-          data-tally-open="ODj9Lk"
-          data-tally-layout="modal"
-          data-tally-width="500"
+        <LaunchAppButton
+          tagSize="md"
           className="btn-primary"
-          style={{ padding: '18px 32px', fontSize: 15, border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
-        >
-          Join Waitlist
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </button>
+          style={{ padding: '18px 32px', fontSize: 15 }}
+        />
         <div
           className="contact-line"
           style={{
