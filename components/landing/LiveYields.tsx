@@ -32,12 +32,12 @@ export default function LiveYields() {
       style={{ paddingTop: 'clamp(80px, 10vw, 120px)', paddingBottom: 'clamp(80px, 10vw, 120px)' }}
     >
       <div className="reveal" style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 48px' }}>
-        <span className="eyebrow-sm">Live yields</span>
+        <span className="eyebrow-sm">Yields</span>
         <h2 className="section-title" style={{ margin: '0 auto 24px', textAlign: 'center' }}>
           Funding-rate <span style={{ color: 'var(--lime)' }}>differentials.</span>
         </h2>
         <p className="section-sub" style={{ margin: '0 auto', textAlign: 'center' }}>
-          Structural yield from spreads across perp venues — not a directional bet. Long rToken, short matching perp. Funding is the product.
+          Mint rTokens, short the matching perps. Earn delta-neutral yield through rTokens.
         </p>
       </div>
 
@@ -55,7 +55,7 @@ export default function LiveYields() {
         <table className="yields-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ borderBottom: '1px solid var(--line-1)' }}>
-              {['Vault', 'APR (Δ-neutral)', 'TVL', 'Funding 8h', 'Vol'].map((h, i) => (
+              {['Vault', 'APR (delta-neutral)', 'TVL', 'Funding 8h', 'Vol'].map((h, i) => (
                 <th
                   key={i}
                   style={{
@@ -158,28 +158,20 @@ export default function LiveYields() {
         </table>
       </div>
 
-      {/* Peak callout */}
-      <div
+      <p
         className="reveal d2"
         style={{
           maxWidth: 960,
           margin: '20px auto 0',
-          padding: '14px 20px',
-          borderRadius: 12,
-          background: 'oklch(0.78 0.16 75 / 0.08)',
-          border: '1px solid oklch(0.78 0.16 75 / 0.30)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 12,
-          fontSize: 13,
-          color: 'var(--ink-2)',
+          fontSize: 11,
+          color: 'var(--ink-4)',
+          textAlign: 'center',
+          fontFamily: 'JetBrains Mono, monospace',
+          letterSpacing: '0.04em',
         }}
       >
-        <span style={{ fontSize: 18 }}>⚡</span>
-        <span>
-          <b style={{ color: 'var(--lime)' }}>rWTI</b> reached <b style={{ color: 'var(--amber)' }}>350%+</b> APR-equivalent during peak volatility · February 2026.
-        </span>
-      </div>
+        Illustrative figures · numbers reflect target ranges, not live yields.
+      </p>
     </section>
   );
 }
