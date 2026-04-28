@@ -3,11 +3,11 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function AppEntry() {
+export default function DemoEntry() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/app/dashboard');
+    router.replace('/demo/dashboard');
   }, [router]);
 
   return (

@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function FinalCTA() {
   return (
     <section
@@ -39,43 +37,23 @@ export default function FinalCTA() {
             marginBottom: 18,
           }}
         >
-          Open the app. Plug in a wallet. See it move.
+          Be first when we open the gates.
         </h2>
-        <p style={{ fontSize: 17, color: 'var(--ink-3)', marginBottom: 36, lineHeight: 1.55 }}>&nbsp;</p>
-        <Link href="/app" className="btn-primary" style={{ padding: '18px 32px', fontSize: 15 }}>
-          Launch App
+        <p style={{ fontSize: 17, color: 'var(--ink-3)', marginBottom: 36, lineHeight: 1.55, maxWidth: 520, margin: '0 auto 36px' }}>
+          Early access opens to traders, LPs, and partners aligned with what we're building.
+        </p>
+        <button
+          data-tally-open="ODj9Lk"
+          data-tally-layout="modal"
+          data-tally-width="500"
+          className="btn-primary"
+          style={{ padding: '18px 32px', fontSize: 15, border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
+        >
+          Join Waitlist
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </Link>
-        <div
-          className="proto-note"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 8,
-            justifyContent: 'center',
-            marginTop: 20,
-            fontFamily: 'JetBrains Mono, monospace',
-            fontSize: 11,
-            color: 'var(--ink-3)',
-            letterSpacing: '0.06em',
-            width: '100%',
-          }}
-        >
-          <span
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: 3,
-              background: 'var(--amber)',
-              boxShadow: '0 0 8px var(--amber)',
-              animation: 'pulse 1.8s ease-in-out infinite',
-            }}
-          />
-          Interactive prototype · not live, no real funds
-        </div>
-
+        </button>
         <div
           className="contact-line"
           style={{

@@ -34,23 +34,8 @@ export default function TopNav() {
       }}
     >
       <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <div
-          style={{
-            width: 26,
-            height: 26,
-            borderRadius: 6,
-            background: 'linear-gradient(135deg, var(--lime), var(--cobalt))',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: 11,
-            fontWeight: 800,
-            color: 'var(--bg-0)',
-            fontFamily: 'JetBrains Mono, monospace',
-          }}
-        >
-          R
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo.jpg" alt="RYex" width={26} height={26} style={{ borderRadius: 6, display: 'block' }} />
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontSize: 17, fontWeight: 800, letterSpacing: '-0.02em' }}>RYex</span>
           <span
@@ -79,7 +64,7 @@ export default function TopNav() {
           return (
             <Link
               key={t.id}
-              href={`/app/${t.id}`}
+              href={`/demo/${t.id}`}
               style={{
                 padding: '7px 14px',
                 borderRadius: 7,

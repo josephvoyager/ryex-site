@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function Hero() {
   return (
     <section
@@ -164,12 +162,18 @@ export default function Hero() {
             flexWrap: 'wrap',
           }}
         >
-          <Link href="/app" className="btn-primary">
-            Launch App
+          <button
+            data-tally-open="ODj9Lk"
+            data-tally-layout="modal"
+            data-tally-width="500"
+            className="btn-primary"
+            style={{ border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}
+          >
+            Join Waitlist
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </Link>
+          </button>
           <a href="#products" className="btn-ghost">
             See how it works
           </a>

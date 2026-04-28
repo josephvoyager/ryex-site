@@ -48,12 +48,21 @@ export default function Nav() {
         <a href="#products">Products</a>
         <a href="#how">How it works</a>
         <a href="#flywheel">Flywheel</a>
-        <a href="#docs">Docs</a>
       </div>
 
-      <div style={{ justifySelf: 'end' }}>
-        <Link
-          href="/app"
+      <div style={{ justifySelf: 'end', display: 'flex', alignItems: 'center', gap: 16 }}>
+        <a
+          href="https://t.me/zzarong"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontSize: 13, color: 'var(--ink-3)' }}
+        >
+          Investors
+        </a>
+        <button
+          data-tally-open="ODj9Lk"
+          data-tally-layout="modal"
+          data-tally-width="500"
           className="launch"
           style={{
             display: 'inline-flex',
@@ -66,13 +75,16 @@ export default function Nav() {
             fontSize: 13,
             fontWeight: 700,
             letterSpacing: '-0.01em',
+            border: 'none',
+            cursor: 'pointer',
+            fontFamily: 'inherit',
           }}
         >
-          Launch App
+          Join Waitlist
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </Link>
+        </button>
       </div>
     </nav>
   );
