@@ -1,3 +1,5 @@
+'use client';
+
 type Props = { title: string; oneLiner: string };
 
 export default function PageStub({ title, oneLiner }: Props) {
