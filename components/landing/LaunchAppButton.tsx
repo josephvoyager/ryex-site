@@ -70,6 +70,7 @@ export default function LaunchAppButton({
     <>
       <button
         onClick={() => setOpen(true)}
+        className={`launch-app-btn ${isLarge ? 'launch-app-btn--lg' : 'launch-app-btn--sm'}`}
         style={buttonStyle}
         onMouseOver={(e) => {
           e.currentTarget.style.transform = 'translateY(-1px)';
@@ -85,7 +86,7 @@ export default function LaunchAppButton({
       >
         {before}
         <span style={{ position: 'relative', zIndex: 1 }}>{label}</span>
-        <span aria-hidden style={tagStyle}>
+        <span aria-hidden className="launch-app-btn__chip" style={tagStyle}>
           <span
             style={{
               width: isLarge ? 5 : 4,

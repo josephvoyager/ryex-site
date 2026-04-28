@@ -97,7 +97,22 @@ export default function Hero() {
         />
       </div>
 
-      <div className="hero-inner" style={{ position: 'relative', zIndex: 1, maxWidth: 1100, margin: '0 auto' }}>
+      {/* Bottom fade — smooth transition to next section */}
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: '30%',
+          background: 'linear-gradient(180deg, transparent 0%, var(--bg-0) 100%)',
+          pointerEvents: 'none',
+          zIndex: 1,
+        }}
+      />
+
+      <div className="hero-inner" style={{ position: 'relative', zIndex: 2, maxWidth: 1100, margin: '0 auto' }}>
         <span className="eyebrow" style={{ animation: 'fadeUp 1s 0.15s forwards cubic-bezier(.2,.7,.25,1)', opacity: 0 }}>
           <span
             className="dot"

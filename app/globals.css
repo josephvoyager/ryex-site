@@ -334,8 +334,22 @@
   .section-title { font-size: clamp(26px, 8vw, 36px) !important; }
   /* Footer links smaller gap */
   .footer-inner .links { gap: 14px !important; font-size: 11px !important; }
-  /* Nav: tighten launch button */
-  nav .launch { padding: 8px 12px !important; font-size: 12px !important; gap: 5px !important; }
+}
+
+/* Compact Launch App button in nav (small variant) on mobile */
+@media (max-width: 640px) {
+  .launch-app-btn--sm {
+    padding: 7px 12px !important;
+    font-size: 12px !important;
+    gap: 5px !important;
+  }
+  .launch-app-btn--sm .launch-app-btn__chip {
+    display: none !important;
+  }
+  .launch-app-btn--sm svg {
+    width: 11px !important;
+    height: 11px !important;
+  }
 }
 
 @media (max-width: 900px) {
