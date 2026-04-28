@@ -2,6 +2,7 @@ import Nav from '@/components/landing/Nav';
 import Hero from '@/components/landing/Hero';
 import Pillars from '@/components/landing/Pillars';
 import HowItWorks from '@/components/landing/HowItWorks';
+import LiveYields from '@/components/landing/LiveYields';
 import Flywheel from '@/components/landing/Flywheel';
 import AssetCloud from '@/components/landing/AssetCloud';
 import FinalCTA from '@/components/landing/FinalCTA';
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <Hero />
       <Pillars />
       <HowItWorks />
+      <LiveYields />
       <Flywheel />
       <AssetCloud />
       <FinalCTA />

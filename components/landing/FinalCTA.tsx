@@ -39,10 +39,10 @@ export default function FinalCTA() {
             marginBottom: 18,
           }}
         >
-          Open the app. Plug in a wallet. See it move.
+          Open the app. Plug in a wallet. <span style={{ color: 'var(--lime)' }}>See it move.</span>
         </h2>
         <p style={{ fontSize: 16, color: 'var(--ink-3)', marginBottom: 36, lineHeight: 1.55 }}>
-          Currently in preview.
+          Live on Arbitrum. No emissions. No waitlist gates. No tricks.
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
           <LaunchAppButton tagSize="md" />
