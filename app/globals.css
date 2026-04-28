@@ -350,6 +350,13 @@
     width: 11px !important;
     height: 11px !important;
   }
+  /* Force nav to flex with space-between so brand is left, button is flush right */
+  nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
 }
 
 @media (max-width: 900px) {
