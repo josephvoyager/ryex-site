@@ -19,7 +19,8 @@ export default function LiquidationPage() {
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const pageRows = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
-  const totalCapacity = filtered.reduce((s, v) => s + v.debt, 0);
+  const totalCapacity = queue.reduce((s, v) => s + v.debt, 0);
+  const avgHealth = queue.length > 0 ? queue.reduce((s, v) => s + v.healthVal, 0) / queue.length : 0;
   const assetCounts = queue.reduce((acc, v) => {
     acc[v.asset] = (acc[v.asset] || 0) + 1;
     return acc;
@@ -32,10 +33,11 @@ export default function LiquidationPage() {
         oneLiner="RLT redemption queue. FIFO ordering. Hand rTokens to the protocol; the most at-risk vault is closed and you receive the oracle value of its collateral."
       />
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12, marginBottom: 14 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12, marginBottom: 14 }}>
         <StatPill label="Redeemable positions" value={queue.length} sub="in RLT queue" tone="amber" />
         <StatPill label="RLT capacity" value={fmtUSD(totalCapacity)} sub="debt available to redeem" tone="lime" />
-        <StatPill label="Assets" value={Object.keys(assetCounts).length} sub="in queue" />
+        <StatPill label="Avg health" value={avgHealth > 0 ? avgHealth.toFixed(2) : '—'} sub="across queue" />
+        <StatPill label="Keeper bounty 30d" value="$184K" sub="paid to keepers" tone="lime" />
       </div>
 
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }}>
