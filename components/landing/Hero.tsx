@@ -128,11 +128,8 @@ export default function Hero() {
             marginTop: '24px',
           }}
         >
-          Your open positions are dead weight.
-          <br />
-          <span className="accent" style={{ display: 'block', color: 'var(--lime)', fontWeight: 800 }}>
-            Not anymore.
-          </span>
+          Your open positions are dead weight.{' '}
+          <span style={{ color: 'var(--lime)', fontWeight: 800 }}>Not anymore.</span>
         </h1>
 
         <p
@@ -149,7 +146,8 @@ export default function Hero() {
             padding: '0 12px',
           }}
         >
-          RYex turns live perp positions into liquid, composable capital. Trade once. Deploy everywhere.
+          RYex turns live perp positions into <strong style={{ color: 'var(--ink-1)', fontWeight: 600 }}>liquid, composable capital</strong>.<br />
+          Trade once. Deploy everywhere.
         </p>
 
         <div

@@ -13,17 +13,17 @@ const pillars: Pillar[] = [
   {
     iconPath: 'M12 2v20M2 12h20',
     title: 'rToken',
-    subtitle: 'Non rebasing · Transferable',
+    subtitle: 'Perp-Backed',
     body:
-      'Mint ERC-20 against any live perp. Non rebasing. Transferable. Redeemable at oracle, any block, no questions.',
+      'Mint ERC-20s against any live perp. Non-rebasing. Transferable. Redeemable at oracle, any block, no questions.',
     meta: ['Max LTV 88%'],
   },
   {
     iconPath: 'M3 17l6-6 4 4 8-8',
     title: 'rYield',
-    subtitle: 'Delta neutral vault',
+    subtitle: 'Delta-Neutral',
     body:
-      'Deposit USDC. Get isolated delta-neutral exposure to funding rate. Long rToken, short matching perp — protocol manages both legs.',
+      'Deposit USDC. The protocol buys rTokens from the AMM and shorts the underlying. Net delta: flat. You pocket the funding spread across crypto, commodities, and equities.',
     aprRows: [
       { asset: 'rWTI', range: '18.8% → 28.4%' },
       { asset: 'rTSLA', range: '8.6% → 12.9%' },
@@ -35,10 +35,11 @@ const pillars: Pillar[] = [
   },
   {
     iconPath: 'M4 6h16M4 12h16M4 18h10',
-    title: 'Composable',
-    subtitle: 'Standard ERC-20',
+    title: 'By Construction',
+    subtitle: 'Composable',
     body:
-      'rTokens are standard ERC-20. LP them. Swap them. Lend them. Use them anywhere ERC-20 is accepted. Arbitrage holds the peg. No emissions. No tricks.',
+      'rTokens are standard ERC-20s. LP them. Swap them. Lend them. Use them across any ERC-20 compatible protocol. Arb holds the peg. No emissions. No tricks.',
+    meta: ['Native AMM · V2 / V3', 'Lockups · None'],
   },
 ];
 
@@ -46,15 +47,12 @@ export default function Pillars() {
   return (
     <section id="products" className="container-wide" style={{ paddingTop: 'clamp(120px, 14vw, 180px)', paddingBottom: 'clamp(80px, 10vw, 120px)' }}>
       <div className="reveal" style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 64px' }}>
-        <span className="eyebrow-sm">Three primitives. One unlock.</span>
+        <span className="eyebrow-sm">Products</span>
         <h2 className="section-title" style={{ margin: '0 auto 24px', textAlign: 'center' }}>
-          Tokenize the trade.
-          <br />
-          <span style={{ color: 'var(--ink-3)', fontWeight: 800 }}>Compose the capital.</span>
+          Three primitives. One unlock.
         </h2>
         <p className="section-sub" style={{ margin: '0 auto', textAlign: 'center' }}>
-          Three primitives that share one truth: a live perp position is collateral. RYex turns it into liquid ERC-20, hedged
-          yield, and protocol-grade integrations.
+          rTokens mint against live positions. rYield harvests funding delta-neutral. Pure ERC-20s that plug into everything.
         </p>
       </div>
 

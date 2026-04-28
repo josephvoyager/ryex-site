@@ -1,18 +1,18 @@
 const steps = [
   {
     n: '01',
-    h: 'Trade through RYex',
-    p: 'Trade Hyperliquid, GMX, Ostium, and more through RYex. Same liquidity. Same leverage. Same fills.',
+    h: 'Open the position',
+    p: 'Trade Hyperliquid, GMX, or Ostium through RYex. Same liquidity. Same leverage. Same fills.',
   },
   {
     n: '02',
-    h: 'Mint rTokens',
+    h: 'Mint against it',
     p: 'Pull up to 88% of net value as rBTC, rETH, rWTI, rTSLA, or any listed asset. Your trade stays open. Your capital comes with you.',
   },
   {
     n: '03',
     h: 'Deploy anywhere',
-    p: 'Sell on the AMM. LP for fees. Deposit into rYield for delta neutral funding. Or take them onchain anywhere ERC-20 is accepted.',
+    p: 'Sell on the AMM. LP for fees. Deposit into rYield for delta-neutral funding. Or take them onchain anywhere ERC-20s are accepted.',
   },
 ];
 
@@ -22,10 +22,10 @@ export default function HowItWorks() {
       <div className="reveal" style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
         <span className="eyebrow-sm">How it works</span>
         <h2 className="section-title" style={{ margin: '0 auto 24px', textAlign: 'center' }}>
-          Three steps. Zero friction.
+          Three steps. One transaction.
         </h2>
         <p className="section-sub" style={{ margin: '0 auto', textAlign: 'center' }}>
-          RYex routes into the venues you already trust. Hyperliquid, GMX, Ostium, and more. Same execution.
+          RYex routes into the venues you already trust — Hyperliquid, GMX, Ostium. Same execution. New superpower.
         </p>
       </div>
 

@@ -2,7 +2,7 @@ const items = [
   { c: 'c1', h: 'Traders mint and sell', p: 'Open positions become rTokens, hit the AMM, convert to USDC. Supply in.' },
   { c: 'c2', h: 'rYield vaults buy', p: 'USDC deposits route through the AMM into rTokens. Demand in.' },
   { c: 'c3', h: 'LPs collect the spread', p: 'Structural flow. Not speculation. Fees scale linearly with protocol usage.' },
-  { c: 'c4', h: 'Arbitrage holds the line', p: 'AMM drifts from oracle? Arbs close it. rTokens track fair value over time.' },
+  { c: 'c4', h: 'Arbitrage holds the line', p: 'AMM drifts from oracle? Arbs close it. rTokens track fair value. Always.' },
 ];
 
 const dotColors: Record<string, string> = {
@@ -25,7 +25,7 @@ export default function Flywheel() {
           The system feeds itself.
         </h2>
         <p className="section-sub" style={{ margin: '0 auto', textAlign: 'center' }}>
-          Trader mint and sell meets rYield buy pressure in the same AMM. Volume prints fees. Fees pull liquidity. Repeat.
+          Trader mint-sell meets rYield buy pressure in the same AMM. Volume prints fees. Fees pull liquidity. Repeat.
         </p>
       </div>
 

@@ -46,7 +46,7 @@ export default function AssetCloud() {
           Crypto. Commodities. Equities.
         </h2>
         <p className="section-sub" style={{ margin: '0 auto', textAlign: 'center' }}>
-          RYex tokenizes perp positions. Continuous exposure. No custody. No expiries. No excuses.
+          RYex tokenizes perp positions. No custody. No roll costs. No expiries. No excuses.
         </p>
       </div>
 
