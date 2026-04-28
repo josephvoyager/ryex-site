@@ -15,13 +15,15 @@ export default function Hero() {
         textAlign: 'center',
       }}
     >
-      {/* Animated background blobs */}
+      {/* Animated background — blobs + grid + noise (layered) */}
       <div
         className="hero-bg"
         aria-hidden
-        style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', filter: 'blur(80px)' }}
+        style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', zIndex: 0 }}
       >
+        {/* Blob 1 — cobalt, top-left */}
         <div
+          className="blob blob-1"
           style={{
             position: 'absolute',
             width: 600,
@@ -30,11 +32,15 @@ export default function Hero() {
             background: 'var(--cobalt)',
             top: -200,
             left: -150,
-            opacity: 0.22,
-            mixBlendMode: 'screen',
+            filter: 'blur(120px)',
+            opacity: 0.35,
+            willChange: 'transform',
+            animation: 'blob-1 28s ease-in-out infinite',
           }}
         />
+        {/* Blob 2 — lime, bottom-right */}
         <div
+          className="blob blob-2"
           style={{
             position: 'absolute',
             width: 700,
@@ -43,11 +49,14 @@ export default function Hero() {
             background: 'var(--lime)',
             bottom: -300,
             right: -200,
+            filter: 'blur(120px)',
             opacity: 0.28,
-            mixBlendMode: 'screen',
+            animation: 'blob-2 32s ease-in-out infinite',
           }}
         />
+        {/* Blob 3 — violet, center */}
         <div
+          className="blob blob-3"
           style={{
             position: 'absolute',
             width: 500,
@@ -56,8 +65,34 @@ export default function Hero() {
             background: 'var(--violet)',
             top: '30%',
             left: '40%',
+            filter: 'blur(120px)',
             opacity: 0.20,
-            mixBlendMode: 'screen',
+            animation: 'blob-3 24s ease-in-out infinite',
+          }}
+        />
+        {/* Grid pattern — fades from center */}
+        <div
+          className="grid"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage:
+              'linear-gradient(var(--line-1) 1px, transparent 1px), linear-gradient(90deg, var(--line-1) 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, transparent 70%)',
+            maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, transparent 70%)',
+          }}
+        />
+        {/* Noise overlay */}
+        <div
+          className="noise"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+            opacity: 0.5,
+            mixBlendMode: 'overlay',
           }}
         />
       </div>

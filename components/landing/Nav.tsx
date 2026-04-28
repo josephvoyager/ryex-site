@@ -20,9 +20,18 @@ export default function Nav() {
     >
       <Link
         href="/"
-        style={{ display: 'flex', alignItems: 'center', gap: 10, fontWeight: 800, fontSize: 15, justifySelf: 'start' }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
+          fontWeight: 800,
+          fontSize: 16,
+          justifySelf: 'start',
+          letterSpacing: '-0.02em',
+        }}
       >
-        <LogoMark />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo.jpg" alt="RYex" width={26} height={26} style={{ borderRadius: 6, display: 'block' }} />
         <span>RYex</span>
       </Link>
 
@@ -36,10 +45,10 @@ export default function Nav() {
           justifySelf: 'center',
         }}
       >
-        <a href="#products" style={{ transition: 'color .2s ease' }}>Products</a>
-        <a href="#how" style={{ transition: 'color .2s ease' }}>How it works</a>
-        <a href="#flywheel" style={{ transition: 'color .2s ease' }}>Flywheel</a>
-        <a href="#docs" style={{ transition: 'color .2s ease' }}>Docs</a>
+        <a href="#products">Products</a>
+        <a href="#how">How it works</a>
+        <a href="#flywheel">Flywheel</a>
+        <a href="#docs">Docs</a>
       </div>
 
       <div style={{ justifySelf: 'end' }}>
@@ -57,7 +66,6 @@ export default function Nav() {
             fontSize: 13,
             fontWeight: 700,
             letterSpacing: '-0.01em',
-            transition: 'transform .15s ease, box-shadow .15s ease',
           }}
         >
           Launch App
@@ -67,27 +75,5 @@ export default function Nav() {
         </Link>
       </div>
     </nav>
-  );
-}
-
-function LogoMark() {
-  return (
-    <div
-      style={{
-        width: 26,
-        height: 26,
-        borderRadius: 6,
-        background: 'linear-gradient(135deg, var(--lime), var(--cobalt))',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: 11,
-        fontWeight: 800,
-        color: 'var(--bg-0)',
-        fontFamily: 'JetBrains Mono, monospace',
-      }}
-    >
-      R
-    </div>
   );
 }

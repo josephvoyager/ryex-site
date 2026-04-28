@@ -19,23 +19,8 @@ export default function Footer() {
           className="brand"
           style={{ justifySelf: 'start', display: 'flex', alignItems: 'center', gap: 10, fontWeight: 800, fontSize: 14 }}
         >
-          <div
-            style={{
-              width: 22,
-              height: 22,
-              borderRadius: 5,
-              background: 'linear-gradient(135deg, var(--lime), var(--cobalt))',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 10,
-              fontWeight: 800,
-              color: 'var(--bg-0)',
-              fontFamily: 'JetBrains Mono, monospace',
-            }}
-          >
-            R
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.jpg" alt="RYex" width={22} height={22} style={{ borderRadius: 5, display: 'block' }} />
           RYex
         </a>
 
