@@ -164,7 +164,7 @@ export default function Hero() {
             flexWrap: 'wrap',
           }}
         >
-          <LaunchAppButton tagSize="md" className="btn-primary" />
+          <LaunchAppButton tagSize="md" />
           <a href="#products" className="btn-ghost">
             See how it works
           </a>

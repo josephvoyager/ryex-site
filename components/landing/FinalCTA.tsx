@@ -41,51 +41,48 @@ export default function FinalCTA() {
         >
           Open the app. Plug in a wallet. See it move.
         </h2>
-        <p style={{ fontSize: 17, color: 'var(--ink-3)', marginBottom: 36, lineHeight: 1.55, maxWidth: 520, margin: '0 auto 36px' }}>
-          The demo is in active development. For an early walkthrough, ping us directly.
+        <p style={{ fontSize: 16, color: 'var(--ink-3)', marginBottom: 36, lineHeight: 1.55 }}>
+          Currently in preview.
         </p>
-        <LaunchAppButton
-          tagSize="md"
-          className="btn-primary"
-          style={{ padding: '18px 32px', fontSize: 15 }}
-        />
-        <div
-          className="contact-line"
-          style={{
-            marginTop: 28,
-            fontSize: 13,
-            color: 'var(--ink-3)',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 6,
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            lineHeight: 1.6,
-          }}
-        >
-          For partnerships, integrations, and institutional inquiries
-          <a
-            href="https://t.me/zzarong"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
+          <LaunchAppButton tagSize="md" />
+          <div
+            className="contact-line"
             style={{
-              color: 'var(--lime)',
-              fontWeight: 600,
-              display: 'inline-flex',
+              fontSize: 13,
+              color: 'var(--ink-3)',
+              display: 'flex',
               alignItems: 'center',
-              gap: 5,
-              padding: '3px 10px',
-              border: '1px solid var(--lime-line)',
-              borderRadius: 999,
-              background: 'var(--lime-soft)',
-              transition: 'background .2s ease, transform .2s ease',
+              gap: 8,
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              lineHeight: 1.6,
             }}
           >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-              <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
-            </svg>
-            Contact
-          </a>
+            <span>For partnerships and institutional inquiries</span>
+            <a
+              href="https://t.me/zzarong"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: 'var(--lime)',
+                fontWeight: 600,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 5,
+                padding: '3px 10px',
+                border: '1px solid var(--lime-line)',
+                borderRadius: 999,
+                background: 'var(--lime-soft)',
+                transition: 'background .2s ease, transform .2s ease',
+              }}
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
+              </svg>
+              Contact
+            </a>
+          </div>
         </div>
       </div>
     </section>

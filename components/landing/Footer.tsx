@@ -26,20 +26,39 @@ export default function Footer() {
 
         <div
           className="links"
-          style={{ justifySelf: 'center', display: 'flex', gap: 24, fontSize: 12, color: 'var(--ink-3)', flexWrap: 'wrap' }}
+          style={{ justifySelf: 'center', display: 'flex', gap: 24, fontSize: 12, color: 'var(--ink-3)', flexWrap: 'wrap', alignItems: 'center' }}
         >
-          <a href="#" onClick={(e) => e.preventDefault()} style={{ position: 'relative' }}>
+          <a href="#products">Products</a>
+          <a href="#how">How it works</a>
+          <a href="#flywheel">Flywheel</a>
+          <a
+            href="#"
+            onClick={(e) => e.preventDefault()}
+            className="soon"
+            style={{ position: 'relative', cursor: 'help', display: 'inline-flex', alignItems: 'center', gap: 6 }}
+          >
             Docs
+            <span
+              style={{
+                fontSize: 9,
+                fontWeight: 700,
+                letterSpacing: '0.12em',
+                color: 'var(--amber)',
+                padding: '2px 6px',
+                border: '1px solid oklch(0.80 0.15 75 / 0.35)',
+                background: 'oklch(0.80 0.15 75 / 0.10)',
+                borderRadius: 4,
+                textTransform: 'uppercase',
+                fontFamily: 'JetBrains Mono, monospace',
+                lineHeight: 1,
+              }}
+            >
+              Soon
+            </span>
           </a>
-          <a href="#" onClick={(e) => e.preventDefault()}>Blog</a>
           <a href="https://x.com/RYex_finance" target="_blank" rel="noopener noreferrer">
             X
           </a>
-          <a href="https://t.me/zzarong" target="_blank" rel="noopener noreferrer">
-            Telegram
-          </a>
-          <a href="#" onClick={(e) => e.preventDefault()}>GitHub</a>
-          <a href="#" onClick={(e) => e.preventDefault()}>Audits</a>
         </div>
 
         <div

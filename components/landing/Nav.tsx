@@ -60,21 +60,7 @@ export default function Nav() {
         >
           Investors
         </a>
-        <LaunchAppButton
-          tagSize="sm"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 7,
-            padding: '9px 16px',
-            borderRadius: 999,
-            background: 'var(--lime)',
-            color: 'var(--bg-0)',
-            fontSize: 13,
-            fontWeight: 700,
-            letterSpacing: '-0.01em',
-          }}
-        />
+        <LaunchAppButton tagSize="sm" />
       </div>
     </nav>
   );
