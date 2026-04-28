@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     title: 'RYex — The Capital Layer for Perp Markets',
     description: 'Mint ERC-20 against any live perp. Earn delta-neutral funding yield.',
   },
+  icons: {
+    icon: [
+      { url: '/logo.jpg', type: 'image/jpeg' },
+    ],
+    apple: '/logo.jpg',
+    shortcut: '/logo.jpg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
