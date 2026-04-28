@@ -296,15 +296,46 @@
 }
 
 @media (max-width: 640px) {
+  /* Tighter section paddings on mobile — was 80-120px, now 56-80px */
+  section.container-wide { padding-top: clamp(56px, 12vw, 80px) !important; padding-bottom: clamp(56px, 12vw, 80px) !important; }
+  /* Hero stays generous — first impression */
+  .hero { min-height: 80vh !important; padding-top: 64px !important; padding-bottom: 96px !important; }
   .hero h1 { font-size: clamp(34px, 10vw, 56px) !important; }
   .hero p.sub, .hero .sub { font-size: 14px !important; padding: 0 4px !important; }
   .hero .ctas { flex-direction: column !important; width: 100% !important; max-width: 280px !important; margin: 0 auto !important; }
-  .hero .ctas a { width: 100% !important; justify-content: center !important; padding: 13px 0 !important; }
+  .hero .ctas a, .hero .ctas button { width: 100% !important; justify-content: center !important; padding: 13px 18px !important; }
+  /* Section titles tighten */
   .section-title { font-size: clamp(28px, 7vw, 42px) !important; line-height: 1.1 !important; }
   .section-sub { font-size: 14px !important; }
-  .footer-inner { grid-template-columns: 1fr !important; justify-items: center !important; gap: 14px !important; }
+  /* Pillars first section keeps a bit more top padding (transition from hero) */
+  #products { padding-top: clamp(72px, 14vw, 100px) !important; }
+  /* Footer stacking */
+  .footer-inner { grid-template-columns: 1fr !important; justify-items: center !important; gap: 14px !important; text-align: center; }
   .footer-inner .brand, .footer-inner .links, .footer-inner .copy { justify-self: center !important; }
+  .footer-inner .links { flex-wrap: wrap !important; justify-content: center !important; }
   .contact-line { flex-direction: column !important; }
+  /* Nav: hide Investors text, keep button */
+  nav .investors-link { display: none !important; }
+  /* Live Yields table — hide secondary columns, keep Vault / APR / Vol */
+  .yields-table th:nth-child(3),
+  .yields-table td:nth-child(3),
+  .yields-table th:nth-child(4),
+  .yields-table td:nth-child(4) { display: none !important; }
+  .yields-table th, .yields-table td { padding: 12px 14px !important; }
+  /* Flywheel SVG narrower */
+  .flywheel-svg-wrap { max-width: min(380px, 90vw) !important; }
+}
+
+@media (max-width: 420px) {
+  /* Even tighter on tiny phones */
+  .hero h1 { font-size: clamp(30px, 11vw, 44px) !important; }
+  .hero { padding-top: 48px !important; padding-bottom: 72px !important; }
+  section.container-wide { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .section-title { font-size: clamp(26px, 8vw, 36px) !important; }
+  /* Footer links smaller gap */
+  .footer-inner .links { gap: 14px !important; font-size: 11px !important; }
+  /* Nav: tighten launch button */
+  nav .launch { padding: 8px 12px !important; font-size: 12px !important; gap: 5px !important; }
 }
 
 @media (max-width: 900px) {

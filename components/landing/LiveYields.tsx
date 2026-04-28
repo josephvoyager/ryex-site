@@ -52,7 +52,7 @@ export default function LiveYields() {
           overflow: 'hidden',
         }}
       >
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <table className="yields-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ borderBottom: '1px solid var(--line-1)' }}>
               {['Vault', 'APR (Δ-neutral)', 'TVL', 'Funding 8h', 'Vol'].map((h, i) => (

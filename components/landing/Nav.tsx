@@ -56,6 +56,7 @@ export default function Nav() {
           href="https://t.me/zzarong"
           target="_blank"
           rel="noopener noreferrer"
+          className="investors-link"
           style={{ fontSize: 13, color: 'var(--ink-3)' }}
         >
           Investors

@@ -39,7 +39,7 @@ const ghostAngles = [-95, -59, -23, 13, 49, 85, 121, 157, 193, 229];
 
 export default function AssetCloud() {
   return (
-    <section className="container-wide" style={{ paddingTop: 'clamp(80px, 10vw, 120px)', paddingBottom: 80 }}>
+    <section className="container-wide" style={{ paddingTop: 'clamp(80px, 10vw, 120px)', paddingBottom: 'clamp(80px, 10vw, 120px)' }}>
       <div className="reveal" style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
         <span className="eyebrow-sm">Supported assets</span>
         <h2 className="section-title" style={{ margin: '0 auto 24px', textAlign: 'center' }}>
