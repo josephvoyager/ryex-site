@@ -103,7 +103,7 @@ export default function DemoAccessModal({ onClose }: Props) {
                 animation: 'pulse 1.8s ease-in-out infinite',
               }}
             />
-            Demo · in progress
+            Preview
           </span>
         </div>
 
@@ -117,7 +117,7 @@ export default function DemoAccessModal({ onClose }: Props) {
             color: 'var(--ink-1)',
           }}
         >
-          Still cooking. Want an early look?
+          Want an early look?
         </h2>
 
         <p
@@ -129,7 +129,7 @@ export default function DemoAccessModal({ onClose }: Props) {
             margin: '0 0 26px 0',
           }}
         >
-          We're polishing the prototype daily — flows, fills, and edge cases. If you'd like a walkthrough now, message us on Telegram and we'll share the live demo link directly.
+          Demo is shipping daily. Ping us on Telegram for the live link.
         </p>
 
         <a
@@ -166,7 +166,7 @@ export default function DemoAccessModal({ onClose }: Props) {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z" />
           </svg>
-          Message @zzarong on Telegram
+          Message us on Telegram
         </a>
 
         <button
@@ -193,7 +193,7 @@ export default function DemoAccessModal({ onClose }: Props) {
             e.currentTarget.style.color = 'var(--ink-3)';
           }}
         >
-          Maybe later
+          Close
         </button>
       </div>
 
