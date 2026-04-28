@@ -82,20 +82,100 @@ export default function TopNav() {
         })}
       </div>
 
-      <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 10 }}>
+      <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8 }}>
+        {/* USDC balance pill */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            padding: '7px 12px',
+            borderRadius: 8,
+            border: '1px solid var(--line-1)',
+            background: 'var(--bg-2)',
+            fontSize: 12,
+            fontFamily: 'JetBrains Mono, monospace',
+          }}
+        >
+          <span
+            style={{
+              width: 16,
+              height: 16,
+              borderRadius: 8,
+              background: 'oklch(0.65 0.18 258)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: 9,
+              fontWeight: 800,
+              color: '#fff',
+            }}
+          >
+            $
+          </span>
+          <span style={{ fontWeight: 600, color: 'var(--ink-1)' }}>48,230</span>
+          <span style={{ color: 'var(--ink-4)', fontSize: 11 }}>USDC</span>
+        </div>
+
+        {/* Network pill */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            padding: '7px 10px',
+            borderRadius: 8,
+            border: '1px solid var(--line-1)',
+            background: 'var(--bg-2)',
+            fontSize: 12,
+            fontWeight: 600,
+            color: 'var(--ink-2)',
+          }}
+          title="Arbitrum"
+        >
+          <span
+            style={{
+              width: 8,
+              height: 8,
+              borderRadius: 4,
+              background: 'oklch(0.72 0.17 228)',
+              boxShadow: '0 0 6px oklch(0.72 0.17 228)',
+            }}
+          />
+          <span style={{ fontFamily: 'inherit' }}>Arbitrum</span>
+        </div>
+
+        {/* Connected wallet pill */}
         <button
           style={{
-            padding: '8px 14px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            padding: '7px 12px',
             borderRadius: 8,
-            border: '1px solid var(--line-2)',
-            background: 'var(--bg-1)',
-            color: 'var(--ink-2)',
+            border: '1px solid var(--line-1)',
+            background: 'var(--bg-2)',
+            color: 'var(--ink-1)',
             fontSize: 12,
             fontWeight: 600,
             cursor: 'pointer',
+            fontFamily: 'inherit',
           }}
         >
-          Connect Wallet
+          <span
+            style={{
+              width: 8,
+              height: 8,
+              borderRadius: 4,
+              background: 'var(--pos)',
+              boxShadow: '0 0 6px var(--pos)',
+              animation: 'pulse 2.4s ease-in-out infinite',
+            }}
+          />
+          <span className="num" style={{ fontFamily: 'JetBrains Mono, monospace', letterSpacing: '0.02em' }}>
+            0x71a…3d4f
+          </span>
+          <span style={{ color: 'var(--ink-4)', fontSize: 9 }}>▾</span>
         </button>
       </div>
     </nav>

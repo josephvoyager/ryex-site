@@ -268,9 +268,9 @@ tr:hover td{background:var(--glass-tint)}
   window.addEventListener('error', function(e){ showError('Runtime error', (e.message||'unknown') + '\n\n' + (e.error && e.error.stack ? e.error.stack : '') + '\n\nat ' + (e.filename||'?') + ':' + (e.lineno||'?')); });
 })();
 </script>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.7/babel.min.js" crossorigin></script>
 <script>
 // ======= TWEAKS =======
 const TWEAKS = /*EDITMODE-BEGIN*/{
