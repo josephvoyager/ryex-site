@@ -448,3 +448,94 @@ table tr:last-child td { border-bottom: none; }
   border-radius: 4px; transition: width .2s ease; }
 .ltv-bar .tick { position: absolute; top: -2px; bottom: -2px; width: 1.5px;
   background: var(--ink-2); border-radius: 1px; }
+
+/* ============= Demo app — Mobile (Hyperliquid-style) ============= */
+@media (max-width: 768px) {
+  /* TopNav adapt — hide desktop tabs + balance + network, show scrollable mobile tabs */
+  .app-nav-tabs-desktop { display: none !important; }
+  .app-nav-tabs-mobile { display: block !important; }
+  .wallet-pill--balance,
+  .wallet-pill--network { display: none !important; }
+  .app-nav-top { padding: 10px 12px !important; gap: 8px !important; }
+
+  /* Hide scrollbar in mobile tabs strip */
+  .app-nav-tabs-mobile > div::-webkit-scrollbar { display: none; }
+
+  /* Page container — tighter padding */
+  .animate-in { padding: 14px 12px !important; }
+
+  /* All grid 2-column layouts → 1 column */
+  .animate-in > div[style*="grid-template-columns: 1.1fr 1fr"],
+  .animate-in > div[style*="grid-template-columns: 1.4fr 1fr"],
+  .animate-in > div[style*="grid-template-columns: 1.3fr 1fr"],
+  .animate-in > div[style*="grid-template-columns: 480px 1fr"],
+  .animate-in > div[style*="grid-template-columns: 1fr 1fr"],
+  .animate-in > div[style*="grid-template-columns: 1fr 320px 340px"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  /* Stat pill grids — 4col / 3col grids → 2 columns on mobile */
+  .animate-in > div[style*="grid-template-columns: repeat(4,1fr)"],
+  .animate-in > div[style*="grid-template-columns: repeat(3,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  /* StatPill internal — tighter padding on mobile */
+  .animate-in [class*="glass"] { padding-left: 14px; padding-right: 14px; }
+
+  /* Sticky right panels lose stickiness on mobile */
+  .glass[style*="position: sticky"],
+  .glass[style*="position:sticky"] { position: relative !important; top: auto !important; }
+
+  /* Tables — wrap in horizontal scroll automatically */
+  .animate-in table { display: block; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  .animate-in table thead, .animate-in table tbody { display: table; width: 100%; min-width: 600px; }
+  .animate-in table tr { display: table-row; }
+  .animate-in table th, .animate-in table td { display: table-cell; padding: 10px 12px !important; font-size: 11px; }
+
+  /* PageHeader title smaller on mobile */
+  .animate-in h1 { font-size: 18px !important; }
+  .animate-in p { font-size: 11.5px !important; }
+
+  /* Trade page — nuke 3-col layout, stack chart/book/order panel vertically */
+  .animate-in > div[style*="grid-template-columns: 1fr 260px 340px"] > div {
+    border-right: none !important;
+  }
+  /* Trade ticker bar — wrap and shrink */
+  .animate-in > div[style*="min-height:62"],
+  .animate-in > div[style*="min-height: 62"] {
+    flex-wrap: wrap !important;
+    min-height: auto !important;
+    padding: 8px 12px !important;
+    gap: 6px !important;
+  }
+  /* Trade ticker stats — 2-col grid behavior via flex */
+  .animate-in > div[style*="min-height:62"] > div[style*="border-right"],
+  .animate-in > div[style*="min-height: 62"] > div[style*="border-right"] {
+    border-right: none !important;
+    padding: 4px 8px !important;
+    min-width: 90px !important;
+    flex: 1 1 30% !important;
+  }
+  /* Trade chart drawing tools rail — hide on mobile (not useful with tap) */
+  .animate-in div[style*="width:36"][style*="border-right: 1px solid"],
+  .animate-in div[style*="width: 36"][style*="border-right: 1px solid"] { display: none !important; }
+
+  /* Modals — use full-width on mobile */
+  div[role="dialog"] > div,
+  div[style*="position: fixed"][style*="inset: 0"] > div { max-width: 96vw !important; }
+
+  /* Pool / Swap / etc — center content */
+  .animate-in > div[style*="max-width: 1100px"] { max-width: 100% !important; }
+}
+
+@media (max-width: 480px) {
+  /* Even tighter on phones */
+  .animate-in { padding: 12px 10px !important; }
+  .app-nav-top { padding: 9px 10px !important; gap: 6px !important; }
+  /* Stat pills → 2 cols → still 2 cols (not 1) for compactness */
+  /* But stack the 4-pill grid vertically pairs */
+
+  /* Tables much smaller font */
+  .animate-in table th, .animate-in table td { padding: 8px 10px !important; font-size: 10.5px; }
+}
