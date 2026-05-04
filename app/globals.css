@@ -16,10 +16,15 @@
     --ink-3: oklch(0.66 0.012 258);
     --ink-4: oklch(0.50 0.012 258);
 
-    /* Accent — Lime (primary) */
-    --lime: oklch(0.84 0.17 128);
-    --lime-soft: oklch(0.84 0.17 128 / 0.14);
-    --lime-line: oklch(0.84 0.17 128 / 0.35);
+    /* Brand cyan — derived from logo gradient #00A0AB → #36D3DB */
+    --cyan: #36D3DB;
+    --cyan-soft: rgba(54, 211, 219, 0.14);
+    --cyan-line: rgba(54, 211, 219, 0.35);
+
+    /* Accent — Lime alias → Cyan (demo unified with landing tone, May 2026) */
+    --lime: var(--cyan);
+    --lime-soft: var(--cyan-soft);
+    --lime-line: var(--cyan-line);
 
     /* Accent — Cobalt (info / secondary) */
     --cobalt: oklch(0.65 0.18 258);
@@ -52,7 +57,7 @@
     --glass-2: oklch(0.18 0.014 258);
     --glass-3: oklch(0.22 0.014 258);
     --glass-hover: oklch(0.20 0.014 258);
-    --glass-tint: oklch(0.84 0.17 128 / 0.05);
+    --glass-tint: rgba(54, 211, 219, 0.05);  /* Aligned with cyan brand */
 
     /* Shadows */
     --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
